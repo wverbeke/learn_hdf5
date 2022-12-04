@@ -1,0 +1,13 @@
+- Body instances contain 2 vectors (position and velocity and a mass).
+- The vectors can be 2D or 3D
+- The positions, velocity, mass can be any type of floating point (16, 32, or 64 bit)
+-> Requirement 1: Be able to write bodies to hdf5 files and read them back.
+
+- Bodies are arranged into a StarSystem.
+- StarSystem is a template, because bodies are a template.
+-> Requirement 2: Be able to store a star system to an hdf5 file and read it.
+
+- The evolution of a starsystem must be simulated and written to disk.
+- Each state of the starsystem will have an associated timestep.
+-> Requirement 3: Be able to write a StarSystem with a timestep to and hdf5 file and read it.
+-> Requirement 4: Be able to append a new StarSystem state to an hdf5 file.

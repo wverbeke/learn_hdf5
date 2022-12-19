@@ -4,7 +4,7 @@
 #include "vec.h"
 
 
-void write_vecs(const std::string& filename, const std::string& dset_name, const std::vector<Vec>& vecs){
+void write_vecs(const std::string& filename, const std::string& dset_name, const std::vector<Vec<double>>& vecs){
 
 
     // Each vector has 3 elements.
@@ -33,9 +33,9 @@ void write_vecs(const std::string& filename, const std::string& dset_name, const
 
 int main(){
 
-    std::vector<Vec> vecs_to_write;
+    std::vector<Vec<double>> vecs_to_write;
     for(unsigned i=0; i < 100; ++i){
-        vecs_to_write.push_back(Vec{static_cast<double>(i), static_cast<double>(i), static_cast<double>(i)});
+        vecs_to_write.push_back(Vec<double>{static_cast<double>(i), static_cast<double>(i), static_cast<double>(i)});
     }
     write_vecs("vec_file.h5", "vectors", vecs_to_write);
     

@@ -40,16 +40,17 @@ void write_star_system(const std::string& filename, const std::string& dset_name
 
 
 int main(){
-    std::vector<Body> bodies;
+    std::vector<Body<double>> bodies;
     for(size_t i = 0; i < 100; ++i){
         double xval = static_cast<double>(i);
-        Vec x{xval, xval, xval};
+        Vec<double> x{xval, xval, xval};
         double vval = static_cast<double>(i*2);
-        Vec v{vval, vval, vval};
+        Vec<double> v{vval, vval, vval};
         double m = static_cast<double>(i*3);
-        bodies.push_back(Body(x, v, m));
+        bodies.push_back(Body<double>(x, v, m));
     }
     StarSystem s(bodies);
     
+    write_star_system("single_star_system.h5", "star_systen", bodies);
     write_star_system("single_star_system.h5", "star_systen", bodies);
 }

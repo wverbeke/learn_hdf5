@@ -37,7 +37,7 @@ int main(){
 
     for(unsigned i=0; i < dims[0]; ++i){
         for(unsigned j=0; j < dims[1]; ++j){
-            std::cout << read_array[i][j] << " ";
+            std::cout << read_array[i][j]  - write_array[i][j] << " ";
         }
         std::cout << std::endl;
     }

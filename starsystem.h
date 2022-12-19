@@ -8,12 +8,12 @@
 class StarSystem{
 
     public:
-        StarSystem(const std::vector<Body>& bodies) : _bodies(bodies) {}
+        StarSystem(const std::vector<Body<double>>& bodies) : _bodies(bodies) {}
 
-        const Body& operator[](const unsigned index) const{ return _bodies[index]; }
+        const Body<double> & operator[](const unsigned index) const{ return _bodies[index]; }
         const size_t size() const{ return _bodies.size(); }
 
     private:
-        std::vector<Body> _bodies;
+        std::vector<Body<double>> _bodies;
 };
 #endif

@@ -11,7 +11,7 @@ template <typename T> class Vec{
         T y() const{ return _y; }
         T z() const{ return _z; }
 
-    private:
+    //private:
         T _x;
         T _y;
         T _z;
